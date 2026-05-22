@@ -1,5 +1,5 @@
 set(diss_EXECUTABLES Main_diss.x)
-set(EXE_Main_diss.x_SOURCES Main.cpp Hubb_diss.cpp)
+set(EXE_Main_diss.x_SOURCES Main.cpp Hubb_diss_all.cpp)
 
 # ~~ Paths and Subdirs ~~
 # Keeps the local directory included so Main_diss.x can find local headers like lattice.hpp

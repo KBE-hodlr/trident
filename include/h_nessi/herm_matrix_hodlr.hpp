@@ -222,6 +222,7 @@ class herm_matrix_hodlr{
   void get_mat_reversed(dlr_info &dlr, double *dest);
   void get_mat_reversed(dlr_info &dlr, std::complex<double> *dest);
   void get_mat_reversed(dlr_info &dlr, DMatrix &dest);
+  void get_mat_reversed(dlr_info &dlr, DMatrix &dest, int i, int j);
   /** Retrieve the tv component for tstp t1 and dlr index t2 into `M`. */
   void get_tv(int t1,int t2,ZMatrix &M);
   void get_tv(int t1,int t2,cplx *M);
@@ -235,11 +236,13 @@ class herm_matrix_hodlr{
    */
   void get_tv_reversed(int tstp, dlr_info &dlr, cplx *dest);
   void get_tv_reversed(int tstp, dlr_info &dlr, ZMatrix &dest);
+  void get_tv_reversed(int tstp, dlr_info &dlr, ZMatrix &dest, int i, int j);
   /** Retrieve vt (mixed component with switched contour arguments) for a given timestep. 
    * dest is assumed to be a column-major complex buffer of size r_*size1_*size2_.
   */
   void get_vt(int tstp, dlr_info &dlr, cplx *dest);
   void get_vt(int tstp, dlr_info &dlr, ZMatrix &dest);
+  void get_vt(int tstp, dlr_info &dlr, ZMatrix &dest, int i, int j);
   /** Retrieve the retarded component for times (t1,t2). */
   void get_ret(int t1,int t2,ZMatrix &M);
   void get_ret(int t1,int t2,cplx *M);

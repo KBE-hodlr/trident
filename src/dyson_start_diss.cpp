@@ -720,6 +720,7 @@ double dyson::dyson_start_les_ntti_nobc_diss(herm_matrix_hodlr &G, double mu, cp
   return err;
 }
 
+/*
 double dyson::dyson_start_les_2leg_diss(herm_matrix_hodlr &G, double mu, cplx *H, cplx *ellL, cplx *ellG, herm_matrix_hodlr &Sigma, Integration::Integrator &I, double h) {
   cplx cplxi = cplx(0,1);
 
@@ -802,7 +803,7 @@ double dyson::dyson_start_les_2leg_diss(herm_matrix_hodlr &G, double mu, cplx *H
       // Using notation from Table 4.1 from thesis q_n = \xi 2 G^R_{mn}\ell^<_n
       // Q_n = -i [q_n - y_0 M_{0n}]
       // comment out since we are solving for n>=m so G^R_{mn}=0
-      if(n==m) QBlock -= (2. * G.sig() * cplxi * ZMatrixMap(G.curr_timestep_ret_ptr(m,n), nao_, nao_) * ZMatrixMap(ellL + n*es_, nao_, nao_)).transpose();
+      if(n==m) QBlock -= 0.5 * (2. * G.sig() * cplxi * ZMatrixMap(G.curr_timestep_ret_ptr(m,n), nao_, nao_) * ZMatrixMap(ellL + n*es_, nao_, nao_)).transpose();
 
       ZMatrixMap(M_.data(), nao_, nao_) = ZMatrix::Zero(nao_, nao_);
 //      les_it_int(m, n, G, Sigma, M_.data());
@@ -1057,8 +1058,9 @@ double dyson::dyson_start_les_2leg_diss(herm_matrix_hodlr &G, double mu, cplx *H
 
   return err;
 }
+*/
 
-/*
+
 double dyson::dyson_start_les_2leg_diss(herm_matrix_hodlr &G, double mu, cplx *H, cplx *ellL, cplx *ellG, herm_matrix_hodlr &Sigma, Integration::Integrator &I, double h) {
   cplx cplxi = cplx(0,1);
 
@@ -1135,7 +1137,8 @@ double dyson::dyson_start_les_2leg_diss(herm_matrix_hodlr &G, double mu, cplx *H
       // additional dissipative term
       // Using notation from Table 4.1 from thesis q_n = \xi 2 G^R_{mn}\ell^<_n
       // Q_n = -i [q_n - y_0 M_{0n}]
-      if(m>=n) QBlock -= (2. * G.sig() * cplxi * ZMatrixMap(G.curr_timestep_ret_ptr(m,n), nao_, nao_) * ZMatrixMap(ellL + n*es_, nao_, nao_)).transpose();
+      if(m>n) QBlock -= (2. * G.sig() * cplxi * ZMatrixMap(G.curr_timestep_ret_ptr(m,n), nao_, nao_) * ZMatrixMap(ellL + n*es_, nao_, nao_)).transpose();
+      if(m==n) QBlock -= 0.5 * (2. * G.sig() * cplxi * ZMatrixMap(G.curr_timestep_ret_ptr(m,n), nao_, nao_) * ZMatrixMap(ellL + n*es_, nao_, nao_)).transpose();
 
       ZMatrixMap(M_.data(), nao_, nao_) = ZMatrix::Zero(nao_, nao_);
 //      les_it_int(m, n, G, Sigma, M_.data());
@@ -1388,7 +1391,7 @@ double dyson::dyson_start_les_2leg_diss(herm_matrix_hodlr &G, double mu, cplx *H
 
   return err;
 }
-*/
+
 
 } // namespace
 

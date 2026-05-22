@@ -8,6 +8,7 @@ add_library(h_nessi SHARED
   herm_matrix_hodlr_update.cpp
   herm_matrix_hodlr_write.cpp
   utils.cpp
+  bubble.cpp
   function.cpp
   block.cpp
   blocks_keldysh.cpp

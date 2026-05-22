@@ -1,0 +1,11 @@
+__nt=  2048
+__nlevel=  7
+__svdtol=  1e-12
+__h=  0.03131115459
+
+__BootMaxErr=  1e-10
+__BootMaxIter=  10000
+__StepMaxErr=  1e-10
+__StepMaxIter=  6
+
+__Umax=  0.1

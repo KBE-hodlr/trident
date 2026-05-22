@@ -89,9 +89,11 @@ int main(int argc, char *argv[]){
   h5e::dump<ZMatrix>(out_file, "ellL_mat", ellL_mat);
   h5e::dump<ZMatrix>(out_file, "rho0_mat", rho0_mat);
 
-  for(int k = 1; k <= 5; k++) {
+//  for(int k = 0; k <= 5; k++) {
+  for(int k = 5; k <= 5; k++) {
     for(int hinv = 10; hinv <= 160; hinv*=2) {
-      for(int rv = 0; rv <= 1; rv++) {
+//      for(int rv = 0; rv <= 1; rv++) {
+      for(int rv = 0; rv <= 0; rv++) {
         for(int Lb = 0; Lb <= 1; Lb++) {
           for(int Gb = 0; Gb <= 1; Gb++) {
               std::cout << k << " " << hinv << " " << rv << " " << Lb << " " << Gb << std::endl;
