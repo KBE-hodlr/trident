@@ -10,6 +10,7 @@ add_library(h_nessi SHARED
   utils.cpp
   function.cpp
   block.cpp
+  bubble.cpp
   blocks_keldysh.cpp
   dyson.cpp
   dyson_free.cpp
