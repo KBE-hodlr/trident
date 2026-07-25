@@ -1,7 +1,7 @@
 # H-NESSi: The Hierarchical Non-Equilibrium Systems Simulation package
 
 [![DOI](https://zenodo.org/badge/1180109148.svg)](https://doi.org/10.5281/zenodo.18990387)
-[![arXiv](https://img.shields.io/badge/arXiv-2604.05319-b31b1b.svg)](https://arxiv.org/abs/2604.05319)
+[![Paper](https://img.shields.io/badge/Paper-ScienceDirect-blue.svg)](https://www.sciencedirect.com/science/article/pii/S0010465526002389)
 
 H-NESSi is an open-source C++ software package for solving the Kadanoff-Baym equations (KBE) of nonequilibrium Green's function (NEGF) theory. 
 
@@ -60,11 +60,11 @@ We recommend using a `build.sh` script to pass the necessary path parameters to 
 
 ## Citation
 
-If you use H-NESSi in your research, please consider citing our paper:
-
-> **H-NESSi: The Hierarchical Non-Equilibrium Systems Simulation package** \
->  Thomas Blommel, Jeremija Kovačević, Jason Kaye, Emanuel Gull, Jakša Vučičević, Denis Golež \
-> *[Journal / arXiv link](https://arxiv.org/abs/2604.05319)*
+If you use H-NESSi in your research, please cite our paper.
+> **H-NESSi: The hierarchical non-equilibrium systems simulation package** \
+> Thomas Blommel, Jeremija Kovačević, Jason Kaye, Emanuel Gull, Jakša Vučičević, Denis Golež \
+> *Computer Physics Communications*, Volume 327, October 2026, 110256 \
+> DOI: [10.1016/j.cpc.2026.110256](https://doi.org/10.1016/j.cpc.2026.110256) | [ScienceDirect Link](https://www.sciencedirect.com/science/article/pii/S0010465526002389)
 
 ## License
 
